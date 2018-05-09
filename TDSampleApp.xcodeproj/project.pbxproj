@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FA5882A20A2A2F300676A88 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5882920A2A2F300676A88 /* Icon.swift */; };
+		3FA5882C20A2A34000676A88 /* Topic.Swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5882B20A2A34000676A88 /* Topic.Swift */; };
+		3FA5882E20A2A38900676A88 /* TopicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5882D20A2A38900676A88 /* TopicList.swift */; };
+		3FA5883020A2A46600676A88 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5882F20A2A46600676A88 /* SearchResults.swift */; };
 		3FD17C0F20A28388008739E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD17C0E20A28388008739E2 /* AppDelegate.swift */; };
 		3FD17C1120A28388008739E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD17C1020A28388008739E2 /* ViewController.swift */; };
 		3FD17C1420A28388008739E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD17C1220A28388008739E2 /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FA5882920A2A2F300676A88 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		3FA5882B20A2A34000676A88 /* Topic.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.Swift; sourceTree = "<group>"; };
+		3FA5882D20A2A38900676A88 /* TopicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicList.swift; sourceTree = "<group>"; };
+		3FA5882F20A2A46600676A88 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		3FD17C0B20A28388008739E2 /* TDSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD17C0E20A28388008739E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD17C1020A28388008739E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +85,7 @@
 		3FD17C0D20A28388008739E2 /* TDSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FD17C2E20A28902008739E2 /* Model */,
 				3FD17C0E20A28388008739E2 /* AppDelegate.swift */,
 				3FD17C1020A28388008739E2 /* ViewController.swift */,
 				3FD17C1220A28388008739E2 /* Main.storyboard */,
@@ -94,6 +103,17 @@
 				3FD17C2520A28388008739E2 /* Info.plist */,
 			);
 			path = TDSampleAppTests;
+			sourceTree = "<group>";
+		};
+		3FD17C2E20A28902008739E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FA5882920A2A2F300676A88 /* Icon.swift */,
+				3FA5882B20A2A34000676A88 /* Topic.Swift */,
+				3FA5882D20A2A38900676A88 /* TopicList.swift */,
+				3FA5882F20A2A46600676A88 /* SearchResults.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA5882A20A2A2F300676A88 /* Icon.swift in Sources */,
+				3FA5882C20A2A34000676A88 /* Topic.Swift in Sources */,
 				3FD17C1120A28388008739E2 /* ViewController.swift in Sources */,
+				3FA5882E20A2A38900676A88 /* TopicList.swift in Sources */,
+				3FA5883020A2A46600676A88 /* SearchResults.swift in Sources */,
 				3FD17C0F20A28388008739E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
