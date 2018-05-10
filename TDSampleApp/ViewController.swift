@@ -12,6 +12,7 @@ import SafariServices
 class ViewController: UIViewController {
 
     @IBOutlet weak var table: UITableView!
+    //Datasource should be moved from 
     var searchData : SearchResults?
     
     override func viewDidLoad() {
@@ -27,13 +28,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //Considered making this a protocol
     func fetchData() {
         let apiURL = ApiURL()
         guard let url = apiURL.queryURL(with: "apple") else {
             return
         }
         DownloadService.fetchData(fromURL: url) { (data) in
+            //requires more error checking
             do {
                 let decoder = JSONDecoder()
                 self.searchData = try decoder.decode(SearchResults.self, from: data)

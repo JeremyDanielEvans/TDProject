@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Topic: Decodable {
-    let url: String?
-    let title: String?
-    let icon : Icon?
+struct Topic: SearchRecord, Decodable {
+    var url: String?
+    var title: String?
+    var icon : Icon?
     
     enum CodingKeys : String, CodingKey {
         case url = "FirstURL"

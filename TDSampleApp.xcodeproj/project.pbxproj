@@ -15,6 +15,7 @@
 		3FB414C720A3ED6600712DC9 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB414C620A3ED6600712DC9 /* DownloadService.swift */; };
 		3FB414CA20A3F54B00712DC9 /* TableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB414C920A3F54B00712DC9 /* TableCellProtocol.swift */; };
 		3FB414CC20A3F5AB00712DC9 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB414CB20A3F5AB00712DC9 /* SearchResultTableViewCell.swift */; };
+		3FB414CF20A4109000712DC9 /* SearchRecordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB414CE20A4109000712DC9 /* SearchRecordProtocol.swift */; };
 		3FD17C0F20A28388008739E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD17C0E20A28388008739E2 /* AppDelegate.swift */; };
 		3FD17C1120A28388008739E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD17C1020A28388008739E2 /* ViewController.swift */; };
 		3FD17C1420A28388008739E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD17C1220A28388008739E2 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		3FB414C620A3ED6600712DC9 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		3FB414C920A3F54B00712DC9 /* TableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellProtocol.swift; sourceTree = "<group>"; };
 		3FB414CB20A3F5AB00712DC9 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		3FB414CE20A4109000712DC9 /* SearchRecordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecordProtocol.swift; sourceTree = "<group>"; };
 		3FD17C0B20A28388008739E2 /* TDSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD17C0E20A28388008739E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD17C1020A28388008739E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,15 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		3FB414CD20A40FAD00712DC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FD17C1220A28388008739E2 /* Main.storyboard */,
+				3FD17C1720A28388008739E2 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3FD17C0220A28388008739E2 = {
 			isa = PBXGroup;
 			children = (
@@ -111,14 +122,13 @@
 		3FD17C0D20A28388008739E2 /* TDSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FB414CD20A40FAD00712DC9 /* View */,
 				3FB414C820A3F22100712DC9 /* View Model */,
 				3FB414C320A3EC9000712DC9 /* Services */,
 				3FD17C2E20A28902008739E2 /* Model */,
 				3FD17C0E20A28388008739E2 /* AppDelegate.swift */,
 				3FD17C1020A28388008739E2 /* ViewController.swift */,
-				3FD17C1220A28388008739E2 /* Main.storyboard */,
 				3FD17C1520A28388008739E2 /* Assets.xcassets */,
-				3FD17C1720A28388008739E2 /* LaunchScreen.storyboard */,
 				3FD17C1A20A28388008739E2 /* Info.plist */,
 			);
 			path = TDSampleApp;
@@ -140,6 +150,7 @@
 				3FA5882B20A2A34000676A88 /* Topic.swift */,
 				3FA5882D20A2A38900676A88 /* TopicList.swift */,
 				3FA5882F20A2A46600676A88 /* SearchResults.swift */,
+				3FB414CE20A4109000712DC9 /* SearchRecordProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +264,7 @@
 				3FB414C520A3ECEF00712DC9 /* ApiUrl.swift in Sources */,
 				3FA5882C20A2A34000676A88 /* Topic.swift in Sources */,
 				3FD17C1120A28388008739E2 /* ViewController.swift in Sources */,
+				3FB414CF20A4109000712DC9 /* SearchRecordProtocol.swift in Sources */,
 				3FB414CC20A3F5AB00712DC9 /* SearchResultTableViewCell.swift in Sources */,
 				3FA5882E20A2A38900676A88 /* TopicList.swift in Sources */,
 				3FA5883020A2A46600676A88 /* SearchResults.swift in Sources */,
@@ -414,7 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F3Z3A45B24;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TDSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jde.TDSampleApp;
@@ -429,7 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F3Z3A45B24;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TDSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jde.TDSampleApp;
