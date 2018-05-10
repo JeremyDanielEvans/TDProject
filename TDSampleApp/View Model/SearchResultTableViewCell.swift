@@ -15,6 +15,7 @@ class SearchResultTableViewCell : UITableViewCell, TableCellProtocol {
     static var identifier: String = "searchResult"
     @IBOutlet weak var iconImage : UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    var linkUrl : String?
     
     func configure(from record:Topic){
         descriptionLabel.text = record.title
@@ -41,4 +42,5 @@ class SearchResultTableViewCell : UITableViewCell, TableCellProtocol {
             }
         }
     }
+    
 }

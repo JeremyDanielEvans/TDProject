@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
@@ -68,13 +69,27 @@ extension ViewController : UITableViewDataSource {
         let cell:SearchResultTableViewCell =  tableView.dequeueReusableCell(withIdentifier: SearchResultTableViewCell.identifier, for: indexPath) as! SearchResultTableViewCell
         
         let searchResult = searchData?.getRecord(indexPath: indexPath)
-        cell.configure(from: searchResult!)
-        cell.accessoryType = .disclosureIndicator
+        if searchResult != nil {
+            cell.configure(from: searchResult!)
+            cell.accessoryType = .disclosureIndicator
+        }
+        
         return cell
     }
 }
 
 extension ViewController : UITableViewDelegate {
     
-    //TODO: implement custom UI and click actions
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let searchResult = searchData?.getRecord(indexPath: indexPath) else {
+            return
+        }
+        if let urlString = searchResult.url {
+            if let url = URL(string: urlString) {
+                let safariVC = SFSafariViewController(url: url )
+                self.present(safariVC, animated: true, completion: nil)
+            }
+        }
+    }
+    
 }
