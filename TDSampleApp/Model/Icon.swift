@@ -38,4 +38,8 @@ struct Icon: Decodable {
         
         url = try container.decode(String.self, forKey: .url)
     }
+    
+    func getURL() -> URL? {
+        return URL.init(string: self.url!)
+    }
 }
